@@ -1,5 +1,6 @@
 function Interpreter(sourceCode) {
-  this.sourceCode = sourceCode.replace(/[ \n]/g, "").replace(/[^><+-.,\[\]]/g, ""); // Remove spaces and letters
+  this.originalSourceCode = sourceCode;
+  this.sourceCode = this.originalSourceCode.replace(/[ \n]/g, "").replace(/[^><+-.,\[\]]/g, ""); // Remove spaces and letters
   this.sourceLength = this.sourceCode.length;
   this.bracketPointers = [];
 
@@ -10,7 +11,7 @@ function Interpreter(sourceCode) {
 Interpreter.prototype.run = function(callback) {
   var output = "";
 
-  if(this.sourceLength > 0) {
+  if(this.originalSourceCode.length > 0) {
     if(this.buildBracketPointers()) {
       output = this.execute();
 
@@ -73,8 +74,7 @@ Interpreter.prototype.execute = function() {
 
   while(true) {
     currentChar = this.sourceCode.charAt(codePointer);
-
-
+    
     switch(currentChar) {
       case ">":
         this.pointer++;
