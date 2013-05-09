@@ -1,0 +1,123 @@
+html, body {
+  margin: 0;
+  padding: 0;
+  font: 15px/1.6 Helvetica, Arial, sans-serif;
+  color: #666;
+}
+
+h1 {
+  margin: 0;
+  color: #3498db;
+}
+
+#container {
+  width: 500px;
+  margin: 0 auto;
+  padding-top: 70px;
+  box-sizing: border-box;
+  padding-bottom: 100px;
+}
+
+#container > div {
+  margin-top: 40px;
+}
+
+#container label, #container textarea {
+  display: block;
+  width: 100%;
+}
+
+#container label {
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+#container textarea {
+  height: 200px;
+  border: 1px solid #ccc;
+  box-sizing: border-box;
+  padding: 10px;
+  font: inherit;
+  font-family: "Consolas", monospace;
+  color: inherit;
+  white-space: pre;
+  word-wrap: normal;
+}
+
+#container textarea:focus {
+  outline: none;
+  border-color: #2980b9;
+}
+
+#container textarea[readonly]:focus {
+  border-color: #ccc;
+}
+
+#source {
+  resize: vertical;
+}
+
+#output {
+  resize: none;
+}
+
+button.action {
+  border: none;
+  background-color: #3498db;
+  box-sizing: border-box;
+  display: block;
+  width: 100%;
+  padding: 10px 10px;
+  border-radius: 5px;
+  font: inherit;
+  font-weight: bold;
+  color: #eee;
+  transition: background-color 100ms ease;
+}
+
+button.action:hover {
+  background-color: #60BBF7;
+  color: #fff;
+  cursor: pointer;
+}
+
+#infoContainer {
+  margin-top: 20px;
+}
+
+#infoContainer .errors {
+  color: #c0392b;
+}
+
+#infoContainer > div {
+  display: none;
+}
+
+#infoContainer p {
+  margin: 0;
+  margin-bottom: 10px;
+  font-weight: bold;
+}
+
+.errors ul, .errors ul li {
+  list-style-type: disc;
+  list-style-position: inside;
+}
+
+.errors ul {
+  margin: 0;
+  padding: 0;
+  padding-left: 15px;
+}
+
+.errors ul li {
+  margin-bottom: 10px;
+}
+
+.errors ul li:last-child {
+  margin-bottom: 0;
+}
+
+#infoContainer .notice {
+  color: #27ae60;
+}
