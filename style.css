@@ -10,6 +10,11 @@ h1 {
   color: #3498db;
 }
 
+p {
+  margin: 0;
+  margin-bottom: 1em;
+}
+
 #container {
   width: 500px;
   margin: 0 auto;
@@ -120,4 +125,12 @@ button.action:hover {
 
 #infoContainer .notice {
   color: #27ae60;
+}
+
+#container .intro {
+  margin-top: 0px;
+}
+
+.intro p .brainfuck {
+  font-style: italic;
 }
