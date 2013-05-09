@@ -13,24 +13,24 @@ document.addEventListener("DOMContentLoaded", function() {
     var interpreter = new Interpreter(sourceField.value);
 
     interpreter.run(function(error, output) {
-      errorContainer.style.display = "none";
-      codeError.style.display = "none";
-      executionError.style.display = "none";
-      noticeContainer.style.display = "none";
+      errorContainer.hide();
+      codeError.hide();
+      executionError.hide();
+      noticeContainer.hide();
 
       outputField.value = "";
 
       if(!error) {
         infoNotice.innerText = "Execution completed successfully.";
-        noticeContainer.style.display = "block";
+        noticeContainer.show();
         outputField.value = output;
       } else {
         if(error.codeError) {
-          codeError.style.display = "block";
-          executionError.style.display = "none";
+          codeError.show();
+          executionError.hide();
         } else {
-          codeError.style.display = "none";
-          executionError.style.display = "block";
+          codeError.hide();
+          executionError.show();
         }
 
         errorList.innerHTML = "";
@@ -41,10 +41,17 @@ document.addEventListener("DOMContentLoaded", function() {
           errorList.appendChild(errorItem);
         }
 
-        errorContainer.style.display = "block";
+        errorContainer.show();
       }
     });
   });
 });
 
+// Utility stuff
+HTMLElement.prototype.hide = function() {
+  this.style.display = "none";
+}
 
+HTMLElement.prototype.show = function() {
+  this.style.display = "block";
+}
