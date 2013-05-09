@@ -58,12 +58,18 @@ p {
   border-color: #ccc;
 }
 
+#container #sourceContainer {
+  margin-top: 30px;
+}
+
 #source {
   resize: vertical;
 }
 
-#output {
+#container #output {
   resize: none;
+  white-space: normal;
+  word-wrap: break-word;
 }
 
 button.action {
