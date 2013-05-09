@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title>Brainfuzzer</title>
+  <script src="./brainfuck_interpreter.js"></script>
+  <script src="./brainfuck.js"></script>
+  <link rel="stylesheet" type="text/css" href="./style.css">
+</head>
+<body>
+  <div id="container">
+    <div class="intro">
+      <h1>Brainfuzzer</h1>
+      <p>A simple <strong class="brainfuck">Brainfuck</strong> interpreter</p>
+    </div>
+    <div id="sourceContainer">
+      <label for="source">Source:</label>
+      <textarea id="source" placeholder="Type your code here..."></textarea>
+    </div>
+    <div id="actionContainer">
+      <button class="action" id="startButton">Run!</button>
+    </div>
+    <div id="infoContainer">
+      <div class="errors">
+        <p class="codeError">The following mistakes have been found in your code:</p>
+        <p class="executionError">The following errors have occurred during the execution of your code:</p>
+        <ul id="errorList">
+        </ul>
+      </div>
+      <div class="notice">
+        <p id="infoNotice"></p>
+      </div>
+    </div>
+    <div id="outputContainer">
+      <label for="output">Output:</label>
+      <textarea readonly id="output"></textarea>
+    </div>
+  </div>
+</body>
+</html>
