@@ -15,6 +15,15 @@ p {
   margin-bottom: 1em;
 }
 
+a {
+  text-decoration: none;
+  color: #69bdf5;
+}
+
+a:hover {
+  text-decoration: underline;
+}
+
 #container {
   width: 500px;
   margin: 0 auto;
@@ -47,6 +56,9 @@ p {
   color: inherit;
   white-space: pre;
   word-wrap: normal;
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  border-radius: 0px;
 }
 
 #container textarea:focus {
@@ -72,7 +84,13 @@ p {
   word-wrap: break-word;
 }
 
-button.action {
+button.action:hover {
+  background-color: #60BBF7;
+  color: #fff;
+  cursor: pointer;
+}
+
+button.action, button.action:active {
   border: none;
   background-color: #3498db;
   box-sizing: border-box;
@@ -83,13 +101,7 @@ button.action {
   font: inherit;
   font-weight: bold;
   color: #eee;
-  transition: background-color 100ms ease;
-}
-
-button.action:hover {
-  background-color: #60BBF7;
-  color: #fff;
-  cursor: pointer;
+  transition: background-color 50ms ease;
 }
 
 #infoContainer {
@@ -135,8 +147,4 @@ button.action:hover {
 
 #container .intro {
   margin-top: 0px;
-}
-
-.intro p .brainfuck {
-  font-style: italic;
 }
